@@ -41,3 +41,8 @@ Con el objetivo de desplegar localmente la aplicación Dummy se requieren las si
 4. Ejecutar el comando `docker build -t dummy-react:1 .` para realizar la cosntrucción de la imagen.
 5. Ejecutar el comando `docker run -p 3000:3000 dummy-react:1` para la construcción del contenedor en base a la imagen generada anteriormente.
 6. Ingresar por el navegador a la URL http://localhost:3000/ para ver el proyecto ejecutarse en local.
+
+---
+
+# Levantamiento del Backend
+Para levantar el backend de la aplicación es necesario clonar el [repositorio del Backend](https://dev.azure.com/AlcaldiaMedellin/DevOps%20Dummy%20React/_git/dummy-node-backend) y levantar el Docker compose como especifica el [README](https://dev.azure.com/AlcaldiaMedellin/DevOps%20Dummy%20React/_git/dummy-node-backend?path=/README.md)
