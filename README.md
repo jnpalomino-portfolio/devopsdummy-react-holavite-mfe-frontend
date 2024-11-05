@@ -40,7 +40,7 @@ Con el objetivo de desplegar localmente la aplicación Dummy se requieren las si
 3. Ingresar a la carpeta raíz del proyecto en una terminal.
 4. Ejecutar el comando `docker build -t dummy-react:1 .` para realizar la cosntrucción de la imagen.
 5. Ejecutar el comando `docker run -p 3000:3000 dummy-react:1` para la construcción del contenedor en base a la imagen generada anteriormente.
-6. Ingresar por el navegador a la URL http://localhost:3000/ para ver el proyecto ejecutarse en local.
+6. Ingresar por el navegador a la URL http://localhost:8080/ para ver el proyecto ejecutarse en local.
 
 ---
 
