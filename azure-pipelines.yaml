@@ -1,0 +1,60 @@
+name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+  batch: true
+  branches:
+    include:
+      - main
+      - preprod
+  paths:
+    exclude:
+      - README.md
+      - .gitignore
+
+#=====================================================================#
+# ┌───────────────────────────────────────────────────────────────────┐
+# │                             MODIFICABLE                           │
+# ├───────────────────────────────────────────────────────────────────┤
+variables:
+  # Namespace asignado en el cluster de Openshift
+  - name: namespace
+    value: 'devops-dummy'
+
+  # Asignar el VALUE dependiendo del lenguaje utilizado
+  # en el repositorio.
+  - name: lenguajeDesarrollo
+    value: 'react'
+# └───────────────────────────────────────────────────────────────────┘
+#=====================================================================#
+  - ${{ if eq( variables['Build.SourceBranchName'],'main') }}:
+      group: vg-${{ variables['Build.Repository.Name'] }}-prod
+    ${{ elseif eq( variables['Build.SourceBranchName'],'preprod') }}:
+      group: vg-${{ variables['Build.Repository.Name'] }}-preprod
+      
+  - name: ambiente
+    ${{ if eq( variables['Build.SourceBranchName'], 'main') }}:
+      value: 'prod'
+    ${{ elseif eq( variables['Build.SourceBranchName'], 'preprod') }}:
+      value: 'preprod'
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: DevOps/devops-pipeline-cicd
+      ref: 'refs/heads/feature/segmentacion_templates'
+
+    - repository: Openshift
+      type: git
+      name: Openshift
+      ref: $(Build.SourceBranchName)
+
+stages:
+  - template: master-azure-pipelines.yaml@templates
+    parameters:
+      param_lenguajeDesarrollo: ${{ variables.lenguajeDesarrollo }}
+      # ${{ if eq( variables['Build.SourceBranchName'],'main' ) }}:
+      #   param_ambiente: "prod"
+      # ${{ if eq( variables['Build.SourceBranchName'],'preprod' ) }}:
+      #   param_ambiente: "preprod"
+
