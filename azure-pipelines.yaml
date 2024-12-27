@@ -15,15 +15,22 @@ trigger:
 # ┌───────────────────────────────────────────────────────────────────┐
 # │                             MODIFICABLE                           │
 # ├───────────────────────────────────────────────────────────────────┤
+# Variables obtenidas del estandar de nombramiento para repositorios de código fuente
 variables:
-  # Namespace asignado en el cluster de Openshift
   - name: namespace
-    value: 'devops-dummy'
+    value: 'devopsdummy'
 
-  # Asignar el VALUE dependiendo del lenguaje utilizado
-  # en el repositorio.
-  - name: lenguajeDesarrollo
+  - name: tecnologia
     value: 'react'
+    
+  - name: componente
+    value: 'subpage'
+
+  - name: identificador
+    value: 'mfe'
+
+  - name: tipo
+    value: 'frontend'
 # └───────────────────────────────────────────────────────────────────┘
 #=====================================================================#
   - ${{ if eq( variables['Build.SourceBranchName'],'main') }}:
@@ -52,7 +59,12 @@ resources:
 stages:
   - template: master-azure-pipelines.yaml@templates
     parameters:
-      param_lenguajeDesarrollo: ${{ variables.lenguajeDesarrollo }}
+      param_namespace: ${{ variables.namespace }}
+      param_tecnologia: ${{ variables.tecnologia }}
+      param_componente: ${{ variables.componente }}
+      param_identificador: ${{ variables.identificador }}
+      param_tipo: ${{ variables.tipo }}
+      
       # ${{ if eq( variables['Build.SourceBranchName'],'main' ) }}:
       #   param_ambiente: "prod"
       # ${{ if eq( variables['Build.SourceBranchName'],'preprod' ) }}:
