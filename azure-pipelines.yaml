@@ -33,6 +33,7 @@ variables:
     value: 'frontend'
 # └───────────────────────────────────────────────────────────────────┘
 #=====================================================================#
+ 
   - ${{ if eq( variables['Build.SourceBranchName'],'main') }}:
       group: vg-${{ variables['Build.Repository.Name'] }}-prod
     ${{ elseif eq( variables['Build.SourceBranchName'],'preprod') }}:
@@ -64,6 +65,7 @@ stages:
       param_componente: ${{ variables.componente }}
       param_identificador: ${{ variables.identificador }}
       param_tipo: ${{ variables.tipo }}
+      param_ambiente: ${{ variables.ambiente }}
       
       # ${{ if eq( variables['Build.SourceBranchName'],'main' ) }}:
       #   param_ambiente: "prod"
