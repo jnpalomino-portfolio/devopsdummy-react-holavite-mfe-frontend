@@ -9,5 +9,10 @@ export default defineConfig({
     setupFiles: "./setupTest.js",
     reporters: ["default", "junit"],
     outputFile: "test-results.xml",
+    coverage: {
+      provider: "v8",
+      reporter: ["cobertura", "text", "html"],
+      reportsDirectory: "./coverage",
+    },
   },
 });
