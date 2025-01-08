@@ -15,6 +15,7 @@ dist-ssr
 coverage/
 .scannerwork/
 sonar-project.properties
+test-results.xml
 
 # Editor directories and files
 .vscode/*
