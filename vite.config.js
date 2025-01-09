@@ -11,7 +11,7 @@ export default defineConfig({
     outputFile: "test-results.xml",
     coverage: {
       provider: "v8",
-      reporter: ["cobertura", "text", "html"],
+      reporter: ["cobertura", "text", "html", "lcov"],
       reportsDirectory: "./coverage",
     },
   },
