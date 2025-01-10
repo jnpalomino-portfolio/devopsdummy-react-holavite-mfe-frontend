@@ -1,4 +1,4 @@
-name: $(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+name: $(SourceBranchName)_$(Build.BuildId)
 
 trigger:
   batch: true
