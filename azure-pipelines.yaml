@@ -24,7 +24,7 @@ variables:
     value: 'react'
     
   - name: componente
-    value: 'subpage'
+    value: 'holavite'
 
   - name: identificador
     value: 'mfe'
