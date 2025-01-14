@@ -2,7 +2,7 @@
 
 # Descripción del proyecto
 
-Este proyecto dummy consiste en una aplicación FrontEnd contenerizada desarrollada en React usando la herramienta Vite.
+Este proyecto dummy consiste en una aplicación FrontEnd contenerizada desarrollada en React usando la herramienta Vite. 
 
 ## Objetivo
 
