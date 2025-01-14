@@ -66,9 +66,4 @@ stages:
       param_identificador: ${{ variables.identificador }}
       param_tipo: ${{ variables.tipo }}
       param_ambiente: ${{ variables.ambiente }}
-      
-      # ${{ if eq( variables['Build.SourceBranchName'],'main' ) }}:
-      #   param_ambiente: "prod"
-      # ${{ if eq( variables['Build.SourceBranchName'],'preprod' ) }}:
-      #   param_ambiente: "preprod"
 
