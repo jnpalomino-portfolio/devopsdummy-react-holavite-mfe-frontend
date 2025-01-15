@@ -60,10 +60,6 @@ resources:
 stages:
   - template: master-azure-pipelines.yaml@templates
     parameters:
-      param_namespace: ${{ variables.namespace }}
       param_tecnologia: ${{ variables.tecnologia }}
-      param_componente: ${{ variables.componente }}
-      param_identificador: ${{ variables.identificador }}
-      param_tipo: ${{ variables.tipo }}
       param_ambiente: ${{ variables.ambiente }}
 
