@@ -61,7 +61,7 @@ describe("App Component", () => {
 
     // Verificar que fetch fue llamado con los datos correctos
     expect(global.fetch).toHaveBeenCalledWith(
-      "http://localhost:9001/api/app_dummy",
+      "http://devopsdummycontador.apps.preprodalcaldia.medellin.gov.co",
       expect.objectContaining({
         method: "post",
         headers: { "Content-Type": "application/json" },
