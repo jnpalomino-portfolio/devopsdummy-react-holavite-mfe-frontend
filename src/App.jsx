@@ -11,7 +11,7 @@ function App() {
       numeroClicks: numeroClicks,
     };
     console.log(usuarioInfo);
-    const api = await fetch("http://devopsdummycontador.apps.preprodalcaldia.medellin.gov.co", {
+    const api = await fetch("http://devopsdummycontador.apps.preprodalcaldia.medellin.gov.co/api/app_dummy", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
