@@ -34,11 +34,6 @@ variables:
 # └───────────────────────────────────────────────────────────────────┘
 #=====================================================================#
  
-  - ${{ if eq( variables['Build.SourceBranchName'],'main') }}:
-      group: vg-${{ variables['Build.Repository.Name'] }}-prod
-    ${{ elseif eq( variables['Build.SourceBranchName'],'preprod') }}:
-      group: vg-${{ variables['Build.Repository.Name'] }}-preprod
-      
   - name: ambiente
     ${{ if eq( variables['Build.SourceBranchName'], 'main') }}:
       value: 'prod'
