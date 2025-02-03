@@ -11,7 +11,7 @@ function App() {
       numeroClicks: numeroClicks,
     };
     console.log(usuarioInfo);
-    const api = await fetch("http://localhost:9001/api/app_dummy", {
+    const api = await fetch("http://devopsdummycontador.apps.preprodalcaldia.medellin.gov.co/api/app_dummy", {
       method: "post",
       headers: {
         "Content-Type": "application/json",
@@ -31,9 +31,10 @@ function App() {
     reiniciarContador();
   };
 
+  
   return (
     <>
-      <h1>Hola Mundo</h1>
+      <h1>Hola Mundo Road to prod</h1>
       <div className="card">
         <input
           name="nombre"
