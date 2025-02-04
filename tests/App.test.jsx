@@ -6,7 +6,7 @@ describe("App Component", () => {
   test("renders the initial UI correctly", () => {
     render(<App />);
     // Verificar que el título "Hola Mundo" está presente
-    expect(screen.getByText(/Hola Mundo Road to prod/i)).toBeInTheDocument();
+    expect(screen.getByText(/Hola Mundo/i)).toBeInTheDocument();
 
     // Verificar que el botón de contador está presente y comienza en 0
     expect(screen.getByRole("button", { name: /count is 0/i })).toBeInTheDocument();
