@@ -1,0 +1,12 @@
+name: App Deployment
+on:
+  push:
+    branches:
+      - main
+      - preprod
+
+jobs:
+  call-template:
+    uses: jnpalomino-portfolio/devops-pipeline-cicd/.github/workflows/master-pipeline.yaml@main
+    with:
+      app_name: MyApp
