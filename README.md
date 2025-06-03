@@ -33,7 +33,7 @@ Para desplegar localmente la aplicación Dummy, se pueden seguir dos métodos: s
 #### **Pasos de instalación y ejecución**
 1. Clonar el repositorio:
    ```sh
-   git clone https://AlcaldiaMedellin@dev.azure.com/AlcaldiaMedellin/DevOps%20Dummy/_git/devopsdummy-react-holavite-mfe-frontend
+   git clone https://github.com/jnpalomino-portfolio/devopsdummy-react-holavite-mfe-frontend.git
    ```
 2. Ingresar a la carpeta del proyecto:
    ```sh
@@ -68,7 +68,7 @@ Para desplegar localmente la aplicación Dummy, se pueden seguir dos métodos: s
 1. Abrir Docker Desktop y asegurarse de que esté en ejecución.
 2. Clonar el repositorio:
    ```sh
-   git clone https://AlcaldiaMedellin@dev.azure.com/AlcaldiaMedellin/DevOps%20Dummy/_git/devopsdummy-react-holavite-mfe-frontend
+   git clone https://github.com/jnpalomino-portfolio/devopsdummy-react-holavite-mfe-frontend.git
    ```
 3. Ingresar a la carpeta raíz del proyecto en una terminal:
    ```sh
