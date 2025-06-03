@@ -1,4 +1,4 @@
-name: App Deployment
+name: ${{ github.ref_name }}_${{ github.run_id }}
 on:
   push:
     branches:
@@ -6,5 +6,5 @@ on:
       - preprod
 
 jobs:
-  call-template:
+  deploy:
     uses: jnpalomino-portfolio/devops-pipeline-cicd/.github/workflows/master-pipeline.yaml@main
