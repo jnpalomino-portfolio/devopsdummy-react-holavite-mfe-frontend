@@ -8,3 +8,5 @@ on:
 jobs:
   call-template:
     uses: jnpalomino-portfolio/devops-pipeline-cicd/.github/workflows/master-pipeline.yaml@main
+    secrets:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
