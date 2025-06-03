@@ -11,9 +11,6 @@ on:
       - README.md
       - .gitignore
 
-env:
-  ambiente: ${{ github.ref_name == 'main' && 'prod' || github.ref_name == 'preprod' && 'preprod' || 'otro' }}
-
 jobs:
   reusable-workflow:
     name: Deploy to ${{ github.ref_name }}
