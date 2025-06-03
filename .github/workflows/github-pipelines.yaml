@@ -24,4 +24,4 @@ jobs:
       componente: 'holavite'
       identificador: 'mfe'
       tipo: 'frontend'
-      ambiente: ${{ env.ambiente }}
+      ambiente: ${{ github.ref_name == 'main' && 'prod' || github.ref_name == 'preprod' && 'preprod' || 'otro' }}
