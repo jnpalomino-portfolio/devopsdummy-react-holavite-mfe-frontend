@@ -12,6 +12,6 @@ on:
       - .gitignore
 
 jobs:
-  deploy:
+  resuable-workflow:
     name: Deploy to ${{ github.ref_name }}
     uses: jnpalomino-portfolio/devops-pipeline-cicd/.github/workflows/master-pipeline.yaml@main
