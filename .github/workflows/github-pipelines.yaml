@@ -11,7 +11,17 @@ on:
       - README.md
       - .gitignore
 
+env:
+  ambiente: ${{ github.ref_name == 'main' && 'prod' || github.ref_name == 'preprod' && 'preprod' || 'otro' }}
+
 jobs:
-  resuable-workflow:
+  reusable-workflow:
     name: Deploy to ${{ github.ref_name }}
     uses: jnpalomino-portfolio/devops-pipeline-cicd/.github/workflows/master-pipeline.yaml@main
+    with:
+      namespace: 'devopsdummy'
+      tecnologia: 'react'
+      componente: 'holavite'
+      identificador: 'mfe'
+      tipo: 'frontend'
+      ambiente: ${{ env.ambiente }}
